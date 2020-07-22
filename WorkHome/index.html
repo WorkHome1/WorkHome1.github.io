@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="JS/jquery-3.5.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// Фикмированная шапка при скролле
+			$("#menu").removeClass("default");
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 20) {
+					$("#menu").addClass("default").fadeIn('fast');
+				} else {
+					$("#menu").removeClass("default").fadeIn('fast');
+				};
+			});
+
+			// Плавный скролл по якорям
+			$('a[href^="#"]').bind("click", function(e){
+			var anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $(anchor.attr("href")).offset().top
+			}, 700);
+			e.preventDefault();
+			});
+			return false;
+		   });
+	</script>
+</head>
+<body>
+	<header>
+		<div id="menu">
+			<div class="logo">
+				<p>WORK HOME</p>
+			</div>
+			<div class="page">
+				<ul>
+					<a href="#home" class="point"><li>Home</li></a>
+					<a href="#about"><li>About</li></a>
+					<!-- <a href="#"><li>Work</li></a> -->
+					<a href="#contact"><li>Contact</li></a>
+				</ul>
+			</div>
+		</div>
+		<div id="home">
+			<div class="welcome">
+				<p>Hi there! We are the new kids on the block</p>
+				<p>and we build awesome websites and mobile apps.</p>
+				<form name="button">
+					<input type="submit" name="button" value="WORK WITH US!">
+				</form>
+			</div>
+		</div>
+	</header>
+	<div id="about">
+		<div class="skills">
+			<div class="heading">
+				<h3>SERVICES WE PROVIDE</h3>
+				<hr>
+				<p>We are working with both individuals and businesses from all over the globe to create awesome websites and applications.</p>
+			</div>
+			<div class="services">
+				<div class="block">
+					<img src="image/breanding.png" alt="breanding">
+					<h5>Branding</h5>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+				</div>
+				<div class="block">
+					<img src="image/design.png" alt="breanding">
+					<h5>Design</h5>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+				</div>
+				<div class="block">
+					<img src="image/development.png" alt="breanding">
+					<h5>Development</h5>
+					<p>At vero eos et accusamus et iusto odio dignissimos qui blanditiis praesentium.</p>
+				</div>
+				<div class="block">
+					<img src="image/ROCKET_SCIENCE.png" alt="breanding">
+					<h5>ROCKET SCIENCE</h5>
+					<p>Et harum quidem rerum est et expedita distinctio. Nam libero tempore.</p>
+				</div>
+			</div>
+		</div>
+		<div class="statistics">
+			<div class="heading">
+				<h3>WE GOT SKILLS!</h3>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div class="services">
+				<div class="block">
+					<div class="block1">
+						<div class="box1">
+							<span>90%</span>
+						</div>
+					</div>
+					<p>WEB DESIGN</p>
+				</div>
+				<div class="block">
+					<div class="block1">
+						<div class="box2">
+							<span>75%</span>
+						</div>
+					</div>
+					<p>HTML/CSS</p>
+				</div>
+				<div class="block">
+					<div class="block1">
+						<div class="box3">
+							<span>70%</span>
+						</div>
+					</div>
+					<p>GRAPHIC DESIGN</p>
+				</div>
+				<div class="block">
+					<div class="block1">
+						<div class="box4">
+							<span>85%</span>
+						</div>
+					</div>
+					<p>UI / UX</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div id="work">
+		<div class="data">
+			<div class="heading">
+				<h3>GET IN TOUCH</h3>
+				<hr>
+				<p>1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (???) ???-????</p>
+			</div>
+		</div>
+	</div> -->
+	<div id="contact">
+		<div class="heading">
+			<h3>GET IN TOUCH</h3>
+			<hr>
+			<p>1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (???) ???-????</p>
+		</div>
+		<div class="forma_contact">
+			<form>
+				<div class="wrap">
+					<input type="text" name="name" id="name" placeholder="Yuor name">
+					<input type="text" name="Email" id="Email" placeholder="Your Email">
+				</div>
+				<textarea name="coment" id="coment" rows="10" placeholder="Your Message"></textarea>
+				<br>
+				<input type="submit" value="SEND MESSAGE">
+			</form>
+		</div>
+	</div>
+	<footer>
+		<ul>
+			<a href="https://twitter.com/explore"><li>Twitter</li></a>
+			<a href="https://github.com/"><li>Github</li></a>
+			<a href="https://facebook.com/"><li>Facebook</li></a>
+			<a href="https://dribbble.com/"><li>Dribbble</li></a>
+		</ul>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@font-face{
+	font-family: MR;
+	src: url("../fonts/MS.woff") format("woff"), url("../fonts/MS.woff2") format("woff2");
+}
+
+@font-face{
+	font-family: VAGB;
+	src: url("../fonts/18VAGRoundedMBold.woff") format("woff"), url("../fonts/18VAGRoundedMBold.woff2") format("woff2");
+}
+
+@font-face{
+	font-family: VAGN;
+	src: url("../fonts/18VAGRoundedM-Normal.woff") format("woff"), url("../fonts/18VAGRoundedM-Normal.woff2") format("woff2");
+}
